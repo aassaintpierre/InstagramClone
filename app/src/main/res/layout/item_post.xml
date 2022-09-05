@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/ettImage"
+        android:layout_width="63dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="34dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="364dp"
+        android:layout_height="214dp"
+        android:layout_below="@id/ettImage"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="113dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tName"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="249dp"
+        android:layout_toEndOf="@+id/ettImage"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="17sp"
+        tools:text="Sarah42" />
+
+    <TextView
+        android:id="@+id/twStar"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@drawable/ic_baseline_more" />
+
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="19dp"
+        android:text="" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/instg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/fontecri"
+        android:gravity="center"
+        android:text="Instagram"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
