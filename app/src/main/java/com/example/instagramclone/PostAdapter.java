@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,6 +41,8 @@ public class PostAdapter extends  RecyclerView.Adapter<PostAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Post post = posts.get(position);
+
+
         holder.bind(post);
     }
 
@@ -63,6 +66,7 @@ public class PostAdapter extends  RecyclerView.Adapter<PostAdapter.ViewHolder>{
             tName = itemView.findViewById(R.id.tName);
             twStar = itemView.findViewById(R.id.twStar);
             description = itemView.findViewById(R.id.description);
+
 
         }
 

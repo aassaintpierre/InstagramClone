@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.parse.ParseUser;
 
 
 public class profileFragment2 extends Fragment {
+    public static final String TAG = "ProfileFragment2";
     Button btnLogut;
 
 
@@ -40,6 +42,7 @@ public class profileFragment2 extends Fragment {
                 ParseUser.logOut();
                 Intent intent = new Intent(getContext(),LoginActivity2.class);
                 startActivity(intent);
+                Log.i(TAG, "Logout");
             }
         });
     }

@@ -30,6 +30,8 @@ public class BlankFragment extends Fragment {
      protected  PostAdapter adapter;
      Context context;
 
+     public BlankFragment(){}
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

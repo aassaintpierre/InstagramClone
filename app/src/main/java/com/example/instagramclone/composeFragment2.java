@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -45,6 +46,10 @@ public class composeFragment2 extends Fragment {
     private  Button btn_Submit;
     private File photoFile;
     private ProgressBar pb;
+    private TextInputLayout description_text_input;
+
+
+    public  composeFragment2(){}
 
 
 
@@ -65,6 +70,8 @@ public class composeFragment2 extends Fragment {
         iv_PosterImage = view.findViewById(R.id.iv_PosterImage);
         btn_Submit = view.findViewById(R.id.btn_Submit);
         pb = view.findViewById(R.id.Loading);
+        description_text_input = view.findViewById(R.id.description_text_input);
+
 
 
 
@@ -165,12 +172,17 @@ public class composeFragment2 extends Fragment {
                 if (e!=null) {
                     Log.e(TAG, "Error while saving ", e);
                     Toast.makeText(getContext(), "Error while saving ", Toast.LENGTH_SHORT).show();
+                    pb.setVisibility(ProgressBar.INVISIBLE);
+
                     return;
                 }
-                Log.i(TAG,"Post Save was successful!!");
+                Toast.makeText(getContext(), "Post save as successful!!", Toast.LENGTH_SHORT).show();
                 et_Description.setText("");
+                btn_Submit.setVisibility(View.INVISIBLE);
+                btn_CaptureImage.setVisibility(View.VISIBLE);
                 iv_PosterImage.setImageResource(0);
                 pb.setVisibility(ProgressBar.INVISIBLE);
+                iv_PosterImage.setVisibility(View.INVISIBLE);
 
             }
         });
