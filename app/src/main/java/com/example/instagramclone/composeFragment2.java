@@ -144,8 +144,6 @@ public class composeFragment2 extends Fragment {
             if (resultCode == Activity.RESULT_OK) {
                 Bitmap takenImage = BitmapFactory.decodeFile(photoFile
                         .getAbsolutePath());
-
-//               ImageView ivPreview = (ImageView) findViewById(R.id.ivPreview);
                 iv_PosterImage.setImageBitmap(takenImage);
 
             } else {
