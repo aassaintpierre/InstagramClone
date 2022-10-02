@@ -79,6 +79,10 @@ public class composeFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 launchCamera();
+                btn_Submit.setVisibility(View.VISIBLE);
+                btn_CaptureImage.setVisibility(View.INVISIBLE);
+                et_Description.setVisibility(View.VISIBLE);
+                iv_PosterImage.setVisibility(View.VISIBLE);
 
             }
         });
@@ -98,6 +102,13 @@ public class composeFragment2 extends Fragment {
                 }
                 ParseUser currentUser =ParseUser.getCurrentUser();
                 savePost(description, currentUser,photoFile);
+                btn_Submit.setVisibility(View.VISIBLE);
+                btn_CaptureImage.setVisibility(View.INVISIBLE);
+                et_Description.setVisibility(View.VISIBLE);
+                iv_PosterImage.setVisibility(View.VISIBLE);
+
+
+
 
 
             }

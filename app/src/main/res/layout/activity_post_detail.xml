@@ -3,140 +3,145 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:id="@+id/container1"
+    android:layout_height="match_parent"
+    tools:context=".PostDetailActivity"
     >
-
-    <RelativeLayout
-        android:id="@+id/ProfileUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="RelativeOverlap">
-
-        <ImageView
-            android:id="@+id/ivProfileImage"
-            android:layout_width="62dp"
-            android:layout_height="35dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tvUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_toEndOf="@+id/ivProfileImage"
-            android:textStyle="bold"
-            tools:ignore="RelativeOverlap"
-            tools:text="Sarah42" />
-    </RelativeLayout>
 
 
     <ImageView
-        android:id="@+id/ivPost"
-        android:layout_width="306dp"
-        android:layout_height="225dp"
+        android:id="@+id/ivProfileImageDetail"
+        android:layout_width="58dp"
+        android:layout_height="52dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="81dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvUsernameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/ivProfileImageDetail"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap"
+        tools:text="Sarah42" />
+
+    <ImageView
+        android:id="@+id/ivPostDetail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/ivProfileImageDetail"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageButton
-        android:id="@+id/imgBtnSettings"
+        android:id="@+id/imgBtnSettingsDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-5dp"
         android:backgroundTint="@color/white"
-        android:src="@drawable/ic_baseline_more" />
-
-    <ImageButton
-        android:id="@+id/imgBtnSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPost"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/imgBtnComment"
-        android:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline" />
 
     <ImageButton
-        android:id="@+id/imgBtnComment"
+        android:id="@+id/imgBtnHeartDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPost"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/imgBtnHeart"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/heart" />
+
+    <ImageButton
+        android:id="@+id/imgBtnCommentDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/imgBtnHeartDetail"
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_comment" />
 
     <ImageButton
-        android:id="@+id/imgBtnHeart"
+        android:id="@+id/imgBtnSendDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPost"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/ivPostDetail"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/imgBtnCommentDetail"
         android:backgroundTint="@color/white"
-
-        android:src="@drawable/heart" />
+        android:src="@drawable/ic_baseline" />
 
     <ImageButton
-        android:id="@+id/imgBtnSave"
+        android:id="@+id/imgBtnSaveDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPost"
+        android:layout_below="@+id/ivPostDetail"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/white"
-
         android:src="@drawable/save" />
 
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/tvDescriptionDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgBtnComment"
+        android:layout_below="@+id/imgBtnCommentDetail"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         tools:text="My headshot" />
 
     <TextView
-        android:id="@+id/tvLike"
+        android:id="@+id/tvLikeDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDescription"
+        android:layout_below="@+id/tvDescriptionDetail"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        tools:text="2 likes" />
+        tools:text="0 likes" />
 
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/tvDateDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvLike"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvLikeDetail"
         tools:ignore="RelativeOverlap"
         tools:text="10/23/1" />
 
-    <Space
+    <View
+        android:id="@+id/divider2"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/tvDescription" />
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvDateDetail"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider2"
+        android:layout_marginTop="5dp" />
+
 
 </RelativeLayout>
+
+
+
+
+
+
+
 
 
 
@@ -164,11 +169,11 @@
 <!--    android:layout_width="match_parent"-->
 
 <!--    android:layout_height="match_parent"-->
-<!--   >-->
+<!--    >-->
 
 
 <!--    <ImageView-->
-<!--        android:id="@+id/ettImage"-->
+<!--        android:id="@+id/detailprofile"-->
 <!--        android:layout_width="63dp"-->
 <!--        android:layout_height="52dp"-->
 <!--        android:layout_marginStart="5dp"-->
@@ -176,10 +181,10 @@
 <!--        tools:srcCompat="@tools:sample/avatars" />-->
 
 <!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
+<!--        android:id="@+id/detailimaj"-->
 <!--        android:layout_width="364dp"-->
 <!--        android:layout_height="214dp"-->
-<!--        android:layout_below="@id/ettImage"-->
+<!--        android:layout_below="@id/detailprofile"-->
 <!--        android:layout_centerInParent="true"-->
 <!--        android:layout_marginTop="113dp"-->
 <!--        tools:srcCompat="@tools:sample/avatars" />-->
@@ -189,7 +194,7 @@
 <!--        android:id="@+id/imgBtnHeart"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/imageView"-->
+<!--        android:layout_below="@+id/detailimaj"-->
 <!--        android:layout_marginStart="111dp"-->
 <!--        android:layout_marginTop="-1dp"-->
 <!--        android:src="@drawable/heart"-->
@@ -199,7 +204,7 @@
 <!--        android:id="@+id/BtnComment"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/imageView"-->
+<!--        android:layout_below="@+id/detailimaj"-->
 <!--        android:layout_marginStart="24dp"-->
 <!--        android:layout_marginTop="-3dp"-->
 <!--        android:layout_toEndOf="@+id/imgBtnHeart"-->
@@ -212,7 +217,7 @@
 <!--        android:id="@+id/imgBtnSend"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/imageView"-->
+<!--        android:layout_below="@+id/detailimaj"-->
 <!--        android:layout_marginStart="26dp"-->
 <!--        android:layout_marginTop="2dp"-->
 <!--        android:layout_toEndOf="@+id/BtnComment"-->
@@ -224,7 +229,7 @@
 <!--        android:id="@+id/imgBtnSave"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/imageView"-->
+<!--        android:layout_below="@+id/detailimaj"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_marginTop="5dp"-->
 <!--        android:layout_marginEnd="10dp"-->
@@ -233,21 +238,21 @@
 <!--        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
 
 <!--    <TextView-->
-<!--        android:id="@+id/tName"-->
+<!--        android:id="@+id/detailUsername"-->
 <!--        android:layout_width="83dp"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_marginStart="8dp"-->
 <!--        android:layout_marginTop="52dp"-->
 <!--        android:layout_marginEnd="252dp"-->
-<!--        android:layout_toEndOf="@+id/ettImage"-->
+<!--        android:layout_toEndOf="@+id/detailprofile"-->
 <!--        android:fontFamily="sans-serif-medium"-->
 <!--        android:textSize="17sp"-->
 <!--        tools:text="Sarah42" />-->
 
 
 <!--    <TextView-->
-<!--        android:id="@+id/twStar"-->
+<!--        android:id="@+id/detailStar"-->
 <!--        android:layout_width="44dp"-->
 <!--        android:layout_height="38dp"-->
 <!--        android:layout_alignParentEnd="true"-->
@@ -257,12 +262,11 @@
 <!--        android:drawableLeft="@drawable/ic_baseline_more" />-->
 
 
-
 <!--    <EditText-->
-<!--        android:id="@+id/description"-->
+<!--        android:id="@+id/detaildescription"-->
 <!--        android:layout_width="120dp"-->
 <!--        android:layout_height="21dp"-->
-<!--        android:layout_alignTop="@+id/date"-->
+<!--        android:layout_alignTop="@+id/detaildate"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_marginTop="-29dp"-->
 <!--        android:layout_marginEnd="296dp"-->
@@ -273,7 +277,7 @@
 <!--        android:id="@+id/tvLikes"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/description"-->
+<!--        android:layout_below="@id/detaildescription"-->
 <!--        android:layout_marginTop="8dp"-->
 <!--        android:layout_marginStart="16dp"-->
 <!--        android:textColor="@color/white"-->
@@ -283,19 +287,19 @@
 <!--        />-->
 
 <!--    <TextView-->
-<!--        android:id="@+id/t_username"-->
+<!--        android:id="@+id/detail_username"-->
 <!--        android:layout_width="81dp"-->
 <!--        android:layout_height="36dp"-->
 <!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginBottom="173dp"-->
+<!--        android:layout_marginBottom="172dp"-->
 <!--        android:text="TextView" />-->
 
 <!--    <TextView-->
-<!--        android:id="@+id/date"-->
+<!--        android:id="@+id/detaildate"-->
 <!--        android:layout_width="78dp"-->
 <!--        android:layout_height="20dp"-->
-<!--        android:layout_above="@id/t_username"-->
-<!--        android:layout_below="@id/t_username"-->
+<!--        android:layout_above="@id/detail_username"-->
+<!--        android:layout_below="@id/detail_username"-->
 <!--        android:layout_alignParentStart="true"-->
 <!--        android:layout_marginStart="12dp"-->
 <!--        android:layout_marginTop="-150dp"-->
